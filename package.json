@@ -1,7 +1,7 @@
 {
   "name": "platter",
   "version": "1.0.0",
-  "description": "this is my reataurant app",
+  "description": "this is a simple reataurant app",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,8 +9,12 @@
   "author": "me",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^4.1.0",
+    "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "zomato.js": "^1.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

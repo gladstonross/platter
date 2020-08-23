@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta id="meta-theme" name="theme-color" content="#fff" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>Platter</title>
+    <link rel="icon" href="/photo/platter.png">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="preload" href="./style/style.css" as="style"/>
+   <link rel="stylesheet" href="/modules/animate.min.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <script defer src="./js/main.js"></script>
+  </head>
+
+  <body class="__drkbg">
+    <div class="root d-flex">
+      <main id="search">
+        <div class="search-section d-flex flex-column align-items-center p-3">
+  
+           <a class="__brand w0 align-self-start" href="/"> 
+            <span class="brand-icon"></span>&nbsp;Platter
+          </a>
+  
+          <div class="lan flex-fill align-self-stretch">
+            <form id="submit-form" class="center flex-fill">
+              <div class="d-flex flex-column m-auto w_380">
+                <div class="d-flex __input __m8">
+                  <span class="icon __loc __abs"></span>
+                  <input
+                    id="location"
+                    type="text"
+                    name="city"
+                    class="form-control"
+                    placeholder="city"
+                  />
+                </div>
+  
+                <div class="__input __m8">
+                  <span class="icon __s __abs"></span>
+                  <input
+                    id="restaurant-name"
+                    type="text"
+                    name="restaurant"
+                    class="form-control"
+                    placeholder="Search for restaurant, cuisine or a dish"
+                  />
+                </div>
+              </div>
+  
+              <div>
+                <button
+                  id="submit"
+                  type="submit"
+                  disabled
+                  class="btn __orange __w200 m_1em"
+                >
+                  search
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+  
+        <div class="results container d-flex flex-column __Pad"></div>
+  
+        <template id="productrow">
+          <a
+            href="#"
+            target="blank"
+            class="block-link __wbg __mb6 animate__animated animate__fadeInUp"
+          >
+            <div class="d-flex __card">
+              <img id="res" src="#" class="__card-img" alt="..." />
+              <div class="info col-sm">
+                <h5 class="__card-title __1em"></h5>
+                <p class="card-text"></p>
+                <p class="city card-text"></p>
+              </div>
+              <small class="rate badge badge-success align-self-start"></small>
+            </div>
+          </a>
+        </template>
+  
+        <div id="topbtn" class="__orange">top</div>
+      </main>
+    </div>
+    
+  </body>
+</html>
