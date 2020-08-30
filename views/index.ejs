@@ -17,7 +17,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/modules/animate.min.css" />
-    <link rel="preload" href="./style/style.css" as="style"/>
+    <link rel="preload" href="./style/style.css" as="style" />
     <link rel="stylesheet" href="./style/style.css" />
   </head>
 
@@ -60,13 +60,14 @@
                 <h6 class="lan__p __2em">explore</h6>
 
                 <p class="mb__2em">
-                  need a place to chow down?. dont worry we are here for you...
+                  Need a place to chow down?. dont worry we are here for you. <br>
+                  You may select form our options bellow to get you started  
                 </p>
 
                 <div class="d-flex card-holder">
                   <a href="#" class="card center __pad0 __nb">
                     <span class="menu-bg card-img-wrapper" role="img"></span>
-                    <div class="card-body">
+                    <div class="card-body p-3">
                       <h5 class="lan__p orange">Menu</h5>
                       <p class="card-text __09em __bold">
                         15 Interesting JavaScript and CSS Libraries for October
@@ -77,7 +78,7 @@
 
                   <a href="#" class="card center __pad0 __nb">
                     <span class="popA-bg card-img-wrapper" role="img"></span>
-                    <div class="card-body">
+                    <div class="card-body p-3">
                       <h5 class="lan__p orange">Popular Spot</h5>
                       <p class="card-text __09em __bold">
                         15 Interesting JavaScript and CSS Libraries for October
@@ -88,7 +89,7 @@
 
                   <a href="#" class="card center __pad0 __nb">
                     <span class="cuisine-bg card-img-wrapper" role="img"></span>
-                    <div class="card-body">
+                    <div class="card-body p-3">
                       <h5 class="lan__p orange">title</h5>
                       <p class="card-text __09em __bold">
                         15 Interesting JavaScript and CSS Libraries for October
@@ -99,7 +100,7 @@
 
                   <a href="#" class="card center __pad0 __nb">
                     <span class="idk-bg card-img-wrapper" role="img"></span>
-                    <div class="card-body">
+                    <div class="card-body p-3">
                       <h5 class="lan__p orange">title</h5>
                       <p class="card-text __09em __bold">
                         15 Interesting JavaScript and CSS Libraries for October
@@ -135,10 +136,31 @@
         </div>
 
       </div>
+      <!-- <ul>
+        <% content.map(function(user){ %>
+          <li>
+            <%= user.text %>
+          </li>
+          <img src="<%= user.user.profile_image %>" alt="" width="50" height="50">
+            
+        <% }); %>
+      </ul> -->
     </main>
 
-    <footer style="height: 80px;">
-      <div class="container">portfolio</div>
+    <footer class="d-flex justify-content-column justify-content-center" style="height: 80px;">
+    
+      <ul class="d-flex align-self-center">
+        <li class="m-lr">
+          <a href="#" target="blank"><span class="icon li-in"></span></a>
+        </li>
+        <li class="m-lr">
+          <a href="#" target="blank"><span class="icon li-in"></span></a>
+        </li>
+        <li class="m-lr">
+          <a href="https://github.com/gladstonross" target="blank"> <span class="icon git"></span> </a>
+        </li>
+      </ul>
+      
     </footer>
 
   </body>

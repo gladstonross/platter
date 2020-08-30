@@ -1,3 +1,4 @@
+@import url('./reset.css');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 html{ 
@@ -9,12 +10,9 @@ html{
 }
 
 
-
 body{
     overflow: hidden scroll;
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
     width: 100%;
     height: 100vh;
     background-color:hsl(47, 100%, 100%);
@@ -50,8 +48,16 @@ h6,h5 {
     color:hsl(348, 39.3%, 17.5%);
 }
 
+.dark-col{
+    color: hsl(0deg 0% 9%);
+}
+
+.info{
+    color: hsl(0deg 0% 34%);
+}
 .info p{
     font-size: .9em;
+    color: inherit;
 }
 
 .__bold{
@@ -60,7 +66,6 @@ h6,h5 {
 
 .__card-title{
     margin-bottom: .75em;
-    font-weight: 600;
 }
 
 .results{
@@ -69,6 +74,10 @@ h6,h5 {
 
 small {
     font-size: 90%;
+}
+
+.rate{
+    font-size: 70%;
 }
 
 .w0{
@@ -101,21 +110,20 @@ small {
     color: hsl(22deg 100% 50%);
 }
 
-.__blue{
-    background-color: rgb(0, 110, 255);
+.badge-bg{
+    background-color: hsl(22deg 100% 50%);
+    color: #fff;
 }
-
 
 .__hcol{
     color: hsl(0, 0%, 32%);
 }
 
-
 .center{
     text-align: center;
 }
  .w_380{
-     width: 380px;
+    width: 380px;
  }
 
 .__headbg {
@@ -185,7 +193,6 @@ small {
     margin-bottom: 3em;
 }
 
-
 .card-img-wrapper{
     height: 180px;
     width: 100%;
@@ -200,7 +207,7 @@ small {
     background-image: url('../photo/menu2.jfif');
 }
 .popA-bg{
-    background-image: url('../photo/restaurant.jfif');
+    background-image: url('../photo/popular-spots.jfif');
 }
  .cuisine-bg{
     background-image: url('../photo/cuisine.jfif');
@@ -215,16 +222,13 @@ small {
 }
 
 .search-section{
-    min-height: 400px;
-    background: url('../photo/app-intro-03.png') no-repeat;
-    background-color: #2e2e36;
-    background-position: left;
-    background-size: 1200px;
+    min-height: 360px;
+    background-color: #fbfbfb;
     font-size: .9em;
 }
 
 .form-control{
-    background-color: #efefef;
+    background-color: hsl(0deg 0% 92%);
     border: 1px solid transparent;
 }
 .card-img-wrapper img{
@@ -325,11 +329,17 @@ small {
 .__mb{
     margin-bottom: .8em;
 }
+.m-lr{
+  margin: 0 1rem;
+}
 .mb__2em{
     margin-bottom: 2em;
 }
 .__mb6{
     margin-bottom: .5em;
+}
+.mtb-6{
+    margin: .25em 0;
 }
 .__Pad{
     padding: 12px 0 20px;
@@ -340,9 +350,7 @@ small {
 .pad__1em{
     padding: 1em;
 }
-.__card-title{
-    margin-bottom: .5em !important;
-}
+
 
 .__m8{
     margin: 8px;
@@ -356,10 +364,19 @@ small {
     width: 200px;
 }
 
-.icon{
+.icon,.small-icon{
     display: inline-block;
+}
+
+.icon{
     width: 24px;
     height: 24px;  
+}
+
+.small-icon{
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;  
 }
 
 .icon,.brand-icon{
@@ -375,6 +392,12 @@ small {
     background-image: url('../photo/platter.png');
 }
 
+.git{
+    background-image: url('../photo/social/github.png'); 
+}
+.li-in{
+    background-image: url('../photo/social/LI-In.png'); 
+}
 
 
 .__abs{
@@ -385,6 +408,13 @@ small {
 .__loc{
     background-image: url('../photo/location.png');
 }
+
+.__loc2{ 
+    background-image: url('../photo/loc2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .__s{
     background-image: url('../photo/search.png');
 }
@@ -461,10 +491,9 @@ small {
     height: 100%;
     left: 36%;
 }
-.__section-one-img .left{
+.__section-one-img {
     position: absolute;
-    z-index: 1;
-    bottom: 30px;
+    z-index: -1;
     width: 560px;
 }
 .__section-one-img .mid{
@@ -505,14 +534,6 @@ small {
 .mid {
     transform: translate(0px, 30px);
 }
-.left {
-    transform: translate(30px, 0px);
-    transform: translate(-168px, 80px);
-}
-.right {
-    transform: translate(-30px, -10px);
-}
-
 
 
 .__bf::before,

@@ -38,7 +38,6 @@
                 const data = await res.json();
                 var container = document.querySelector( '.results' );
                 container.innerHTML = '';
-                console.log(data)
                 populateSearchData( data.restaurants );
             }catch (err) {
                 console.error(`${ err }`);
@@ -92,10 +91,10 @@
                         const button = clone.querySelector('.block-link');
 
 
-                        image.setAttribute('width', 130);
-                        image.setAttribute('height', 100);
+                        image.setAttribute('width', 80);
+                        image.setAttribute('height', 80);
 
-                        if (r.thumbnail === '') image.src = `${generateRandomImage(randomImages) }`;
+                        if (r.thumbnail === '') image.src = `${ generateRandomImage(randomImages) }`;
                         else { image.src = r.thumbnail; }
                         title.textContent = r.name;
                         location.textContent = r.location.address;
@@ -134,4 +133,3 @@
     
 
 }).call(this);
-

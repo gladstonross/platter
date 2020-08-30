@@ -20,33 +20,33 @@ app.use( bodyParser.urlencoded({ extended: false }) );
 
 app.get('/', function(req,res) {
 
-    let results = {};
-
-     const reviews = async function() {
+  
+    const reviews = async function() {
+       let reviewsData;
         try {
             const rev = await z.reviews({ res_id: 40848 });
             const data = await rev;
-            const restaurantReviews = data.user_reviews.map(r => {
-                return {
-                    text: r.review_text,
-                    user: r.user,
-                    rating_text: r.rating_text,
-                };
-            });
-
-            results = restaurantReviews;
-
+            reviewsData = data;
         }catch(error) {
-            console.log(error);
+            console.error(error);
         }
-
+        
+        const restaurantReviews = reviewsData.user_reviews.map(r => {
+            return {
+                text: r.review_text,
+                user: r.user,
+                rating_text: r.rating_text,
+            };
+        });
+        console.log(restaurantReviews);
+        res.render('index', { content:restaurantReviews} );
     };
-
-    reviews();
-  
-
-    res.render('index', { content:results});
+    
+    Promise.resolve( reviews() );
+   
+    
 });
+
 
 app.get('/search', function(req, res) {
     res.render('search');
