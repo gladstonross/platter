@@ -16,24 +16,28 @@
       crossorigin="anonymous"
     />
     <link rel="preload" href="./style/style.css" as="style"/>
-   <link rel="stylesheet" href="/modules/animate.min.css" />
+    <link rel="stylesheet" href="/modules/animate.min.css" />
     <link rel="stylesheet" href="./style/style.css" />
-    <script defer src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </head>
 
   <body class="__drkbg">
+
+    <%- include('partial/nav') %>
+
     <div class="root d-flex">
       <main id="search">
-        <div class="search-section d-flex flex-column align-items-center p-3">
+
+        <div class=" search-section d-flex flex-column align-items-center fs-9em bg-light p-3">
   
-           <a class="__brand w0 align-self-start" href="/"> 
+           <!-- <a class="__brand w0 align-self-start" href="/"> 
             <span class="brand-icon"></span>&nbsp;Platter
-          </a>
+          </a> -->
   
           <div class="lan flex-fill align-self-stretch">
             <form id="submit-form" class="center flex-fill">
-              <div class="d-flex flex-column m-auto w_380">
-                <div class="d-flex __input __m8">
+              <div class="d-flex m-auto flex-wrap w_8">
+                <div class="d-flex __input __m8 fg-1 fs-1 fb-3">
                   <span class="icon __loc __abs"></span>
                   <input
                     id="location"
@@ -44,7 +48,7 @@
                   />
                 </div>
   
-                <div class="__input __m8">
+                <div class="__input __m8 fg-1 fs-1 fb-3">
                   <span class="icon __s __abs"></span>
                   <input
                     id="restaurant-name"
@@ -58,10 +62,10 @@
   
               <div>
                 <button
-                  id="submit"
+                  id="submitBtn"
                   type="submit"
                   disabled
-                  class="btn btn-dark __w200 m_1em"
+                  class="btn btn-primary __w200 m_1em"
                 >
                   search
                 </button>
@@ -69,7 +73,19 @@
             </form>
           </div>
         </div>
-  
+
+        <!-- popular search section -->
+        <div class="popular-search d-flex justify-content-center align-items-center">
+          <ul id="popular-search" class="d-flex flex-wrap justify-content-center border-bottom w_6" data-city="<%= content %>">
+            <li><button class="btn btn-light rounded-pill pl-4 pr-4 m-2">American</button></li>
+            <li><button class="btn btn-light rounded-pill pl-4 pr-4 m-2">Fast Food</button></li>
+            <li><button class="btn btn-light rounded-pill pl-4 pr-4 m-2">Pizza</button></li>
+            <li><button class="btn btn-light rounded-pill pl-4 pr-4 m-2">Sandwich</button></li>
+            <li><button class="btn btn-light rounded-pill pl-4 pr-4 m-2">Chinese</button></li>
+            <li><button class="btn btn-light rounded-pill pl-4 pr-4 m-2">Bakery</button></li>
+          </ul>
+        </div>
+
         <div class="results container d-flex flex-column __Pad"></div>
   
         <template id="productrow">
@@ -79,7 +95,7 @@
             class="block-link __wbg __mb6 animate__animated animate__fadeInUp"
           >
             <div class="d-flex __card">
-              <img id="res" src="#" class="__card-img" alt="..." />
+              <img id="res" src="#" class="__card-img" loading="lazy" alt="restaurant thumbnail" />
               <div class="info col-sm">
                 <h5 class="__card-title dark-col __1em"></h5>
                 <div class="d-flex">
