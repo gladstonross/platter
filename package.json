@@ -1,12 +1,12 @@
 {
   "name": "platter",
   "version": "1.0.0",
-  "description": "this is a simple reataurant app",
+  "description": "this is a simple reataurant finder app",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
-  "author": "me",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "animate.css": "^4.1.0",
